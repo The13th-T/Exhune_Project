@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 64031c9674bacff4891fe5780d862f96
+AssetOrigin:
+  serializedVersion: 1
+  productId: 320917
+  packageName: "Free 2D Platformer Tilemap Pack \u2013 Dungeon Theme"
+  packageVersion: 1.0
+  assetPath: Assets/2D Dungeon Tilemap/CoinSystem/Scripts/CollectedCoin.cs
+  uploadId: 777053
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - CoinParticule: {instanceID: 0}
+  - coinSound: {fileID: 8300000, guid: bba97dad64e6dfa4a962f2832a073ca2, type: 3}
+  - audioSource: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

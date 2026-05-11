@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Lower_Bed_Theme.wav-902f3a5f473c6432bdb98332bb38e8ed.sample"
+
+[deps]
+
+source_file="res://Xer0-12/Sounds/Lower_Bed_Theme.wav"
+dest_files=[ "res://.import/Lower_Bed_Theme.wav-902f3a5f473c6432bdb98332bb38e8ed.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
