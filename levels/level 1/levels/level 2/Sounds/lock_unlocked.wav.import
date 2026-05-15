@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/lock_unlocked.wav-2961cd98690b8b92f5b698df44d37b87.sample"
+
+[deps]
+
+source_file="res://Xer0-12/Sounds/lock_unlocked.wav"
+dest_files=[ "res://.import/lock_unlocked.wav-2961cd98690b8b92f5b698df44d37b87.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
