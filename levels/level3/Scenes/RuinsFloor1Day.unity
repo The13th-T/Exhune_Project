@@ -749,8 +749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e0b80e433fff48469ec30e2f4cecdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::zombieScript
-  player: {fileID: 60863609}
-  health: 20
 --- !u!23 &1112467225
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1167,6 +1165,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 279267220759899506, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 60863609}
     - target: {fileID: 1822229897326844075, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.4
