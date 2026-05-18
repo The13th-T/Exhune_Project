@@ -1,16 +1,62 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class zombieScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float health = 20f;
+    public float moveSpeed = 2f; // Monster movement speed
+    private Rigidbody2D rb; // Reference to the Rigidbody2D for physics-based movement
+    
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component attached to the object
+        playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (!player) return;
+
+        Vector2 dir = new Vector2(0, 0);
+        Vector2 movement = new Vector2(0, 0);
+        float distance = 0;
+        GameObject player = GameObject.Find("player");
         
+        if(player) {
+        	dir = player.transform.position - transform.position;
+        	distance = dir.Distance(transform.position - player.position);
+        }
+        
+        if(distance < 5f)
+        {
+        	dir = player.transform.position - transform.position;
+        	Vector2 movement = dir * moveSpeed;
+        }
+        // Apply movement to Rigidbody2D to ensure physics-based movement
+        rb.linearVelocity = movement; // The Rigidbody2D controls position based on velocity
+
+        if (distance < 1f)
+        {
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        Debug.Log("Zombie melee attack!");
+    }
+
+    public void TakeDamage(float dmg)
+    {
+        health -= dmg;
+
+        if (health <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        Debug.Log("Zombie Defeated!");
+        Destroy(gameObject);
     }
 }

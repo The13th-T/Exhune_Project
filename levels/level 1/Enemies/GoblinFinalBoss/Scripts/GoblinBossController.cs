@@ -1,171 +1,54 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GoblinBossController : MonoBehaviour
 {
-    [Header("References")]
     public Transform player;
-    public Transform attackPoint;
+    public float health = 300f;
 
-    [Header("Bomb Attack")]
-    public GameObject bombPrefab;
-    public Transform throwPoint;
-    public float throwCooldown = 3f;
+    public GoblinBossPhases phases;
+    public GoblinBombAttack bombAttack;
+    public GoblinSummonMinions summon;
 
-    [Header("Stats")]
-    public int maxHealth = 5;
-    public int currentHealth;
-
-    [Header("Movement")]
-    public float moveSpeed = 3f;
-    public float stoppingDistance = 1.5f;
-
-    [Header("Melee Attack")]
-    public int damage = 1;
-    public float attackRange = 1.5f;
-    public float attackCooldown = 1.5f;
-
-    private float attackTimer;
-    private float throwTimer;
+    private NavMeshAgent agent;
 
     void Start()
     {
-        currentHealth = maxHealth;
-
-        if (player == null)
-        {
-            GameObject p = GameObject.FindGameObjectWithTag("Player");
-
-            if (p != null)
-                player = p.transform;
-        }
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (!player) return;
 
-        float distance = Vector2.Distance(
-            transform.position,
-            player.position
-        );
+        float dist = Vector3.Distance(transform.position, player.position);
 
-        attackTimer -= Time.deltaTime;
-        throwTimer -= Time.deltaTime;
+        agent.SetDestination(player.position);
 
-        // Movement
-        if (distance > stoppingDistance)
+        phases.HandlePhase(health, this);
+
+        if (dist < 2.5f)
         {
-            transform.position = Vector2.MoveTowards(
-                transform.position,
-                player.position,
-                moveSpeed * Time.deltaTime
-            );
-        }
-
-        // Melee attack
-        if (distance <= attackRange && attackTimer <= 0f)
-        {
-            Attack();
-            attackTimer = attackCooldown;
-        }
-
-        // Bomb throw attack
-        if (distance <= 8f && throwTimer <= 0f)
-        {
-            ThrowBomb();
-            throwTimer = throwCooldown;
-        }
-
-        FacePlayer();
-    }
-
-    void Attack()
-    {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(
-            attackPoint.position,
-            attackRange
-        );
-
-        foreach (Collider2D hit in hits)
-        {
-            if (hit.CompareTag("Player"))
-            {
-                PlayerHealth hp = hit.GetComponent<PlayerHealth>();
-
-                if (hp != null)
-                {
-                    hp.TakeDamage(damage);
-                }
-            }
+            MeleeAttack();
         }
     }
 
-    void ThrowBomb()
+    void MeleeAttack()
     {
-        if (bombPrefab == null || throwPoint == null)
-            return;
-
-        GameObject bomb = Instantiate(
-            bombPrefab,
-            throwPoint.position,
-            Quaternion.identity
-        );
-
-        Vector2 direction =
-            (player.position - throwPoint.position).normalized;
-
-        BombProjectile bp = bomb.GetComponent<BombProjectile>();
-
-        if (bp != null)
-        {
-            bp.SetDirection(direction);
-        }
+        Debug.Log("Goblin slashes!");
     }
 
-    void FacePlayer()
+    public void TakeDamage(float dmg)
     {
-        if (player.position.x < transform.position.x)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-    }
+        health -= dmg;
 
-    public void TakeDamage(int dmg)
-    {
-        currentHealth -= dmg;
-
-        if (currentHealth <= 0)
-        {
+        if (health <= 0)
             Die();
-        }
     }
 
     void Die()
     {
+        Debug.Log("Goblin King defeated!");
         Destroy(gameObject);
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        // Melee attack range
-        if (attackPoint != null)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(
-                attackPoint.position,
-                attackRange
-            );
-        }
-
-        // Bomb range
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(
-            transform.position,
-            8f
-        );
     }
 }
