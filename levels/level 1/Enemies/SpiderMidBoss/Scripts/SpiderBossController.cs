@@ -1,84 +1,53 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SpiderBossController : MonoBehaviour
 {
-    [Header("References")]
     public Transform player;
-    public GameObject webProjectilePrefab;
-    public Transform firePoint;
+    public float health = 200f;
 
-    private Rigidbody2D rb;
+    public SpiderBossPhases phases;
+    public SpiderWebAttack webAttack;
 
-    [Header("Movement")]
-    public float moveSpeed = 2f;
-    public float stoppingDistance = 5f;
-    public float retreatDistance = 3f;
-
-    [Header("Attack")]
-    public float attackRange = 8f;
-    public float attackCooldown = 2f;
-    private float attackTimer;
+    private NavMeshAgent agent;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-
-        if (player == null)
-            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        if (player == null) return;
+        if (!player) return;
 
-        float distance = Vector2.Distance(transform.position, player.position);
+        float distance = Vector3.Distance(transform.position, player.position);
 
-        // Movement AI
-        if (distance > stoppingDistance)
+        agent.SetDestination(player.position);
+
+        phases.HandlePhase(health, this);
+
+        if (distance < 3f)
         {
-            transform.position = Vector2.MoveTowards(
-                transform.position,
-                player.position,
-                moveSpeed * Time.deltaTime
-            );
-        }
-        else if (distance < retreatDistance)
-        {
-            transform.position = Vector2.MoveTowards(
-                transform.position,
-                player.position,
-                -moveSpeed * Time.deltaTime
-            );
-        }
-
-        // Attack
-        attackTimer -= Time.deltaTime;
-
-        if (distance <= attackRange && attackTimer <= 0f)
-        {
-            Shoot();
-            attackTimer = attackCooldown;
+            Attack();
         }
     }
 
-    void Shoot()
-{
-    if (webProjectilePrefab == null || firePoint == null || player == null)
-        return;
-
-    GameObject projObj = Instantiate(
-        webProjectilePrefab,
-        firePoint.position,
-        Quaternion.identity
-    );
-
-    Vector2 direction = (player.position - firePoint.position).normalized;
-
-    WebProjectile projectile = projObj.GetComponent<WebProjectile>();
-
-    if (projectile != null)
+    void Attack()
     {
-        projectile.SetDirection(direction);
+        Debug.Log("Spider melee attack!");
     }
-}
+
+    public void TakeDamage(float dmg)
+    {
+        health -= dmg;
+
+        if (health <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        Debug.Log("Spider Boss Defeated!");
+        Destroy(gameObject);
+    }
 }
