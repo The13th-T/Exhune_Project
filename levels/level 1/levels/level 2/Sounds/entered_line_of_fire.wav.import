@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/entered_line_of_fire.wav-7dd0b80dd0d839c1ca37419a73be7dbb.sample"
+
+[deps]
+
+source_file="res://Xer0-12/Sounds/entered_line_of_fire.wav"
+dest_files=[ "res://.import/entered_line_of_fire.wav-7dd0b80dd0d839c1ca37419a73be7dbb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ring_pickup.wav-f9bcf201837e356a4e54b59f4294d088.sample"
+
+[deps]
+
+source_file="res://Xer0-12/Sounds/Ring_pickup.wav"
+dest_files=[ "res://.import/Ring_pickup.wav-f9bcf201837e356a4e54b59f4294d088.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
