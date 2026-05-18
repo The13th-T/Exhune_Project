@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Box_Spring_Theme.wav-1775cda3f87d45374288135552d7e057.sample"
+
+[deps]
+
+source_file="res://Xer0-12/Sounds/Box_Spring_Theme.wav"
+dest_files=[ "res://.import/Box_Spring_Theme.wav-1775cda3f87d45374288135552d7e057.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
