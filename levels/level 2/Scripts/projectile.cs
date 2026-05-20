@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
-    public static float shotSpeed = -1;
+    public static float shotSpeed = 10;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,6 +15,6 @@ public class projectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, shotSpeed * Time.deltaTime, 0);
+        transform.Translate(shotSpeed * Time.deltaTime, 0, 0);
     }
 }

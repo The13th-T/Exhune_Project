@@ -7,6 +7,7 @@ public class testPlayer : MonoBehaviour
 	public static string playerDirection = "right";
 	public static float playerPositionX = 0;
 	public static float playerPositionY = 0;
+    public static float gravity = -20;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,12 +36,16 @@ public class testPlayer : MonoBehaviour
             transform.Translate(20 * Time.deltaTime, 0, 0);
 			playerDirection = "right";
         }
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
         {
             if (Input.GetKey("up"))
             {
-                transform.Translate(0, 600 * Time.deltaTime, 0);
+                transform.Translate(0, 400 * Time.deltaTime, 0);
             }
+        }
+        else
+        {
+            transform.Translate(0, gravity * Time.deltaTime, 0);
         }
     }
 }
