@@ -796,15 +796,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3853113376207450590, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
       propertyPath: scenename
-      value: RuinsFloor3Day
+      value: RuinsFloor1Night
       objectReference: {fileID: 0}
     - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.787491
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -15.264517
+      value: 39.9
       objectReference: {fileID: 0}
     - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -894,6 +894,14 @@ PrefabInstance:
     - target: {fileID: 1822229897326844075, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453906693958757480, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6453906693958757480, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -57.5
       objectReference: {fileID: 0}
     - target: {fileID: 7100427678772966377, guid: a10a12c2ecdc30b4db2effa1eeb8caa3, type: 3}
       propertyPath: m_Name

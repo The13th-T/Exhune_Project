@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4146fc6317cd47e49ad767be19137ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneScript.PlayerMovement
-  moveSpeed: 5
+  moveSpeed: 10
   attackPoint: {fileID: 0}
   attackRange: 0.5
   enemyLayers:
