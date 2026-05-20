@@ -256,6 +256,79 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.000001, y: 1.000009}
   m_EdgeRadius: 0
+--- !u!1001 &184437301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 269501866311186550, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: lockOn
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 269501866311186550, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03235595
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.28656366
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.504608
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7606593855247333526, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135012184763350312, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
+      propertyPath: m_Name
+      value: ZombieKnight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4ce39ce20104231449e93bc71f5c3246, type: 3}
 --- !u!1001 &213439067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -313,6 +386,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da2a873ad126164fa7c79cd7aa72c4b, type: 3}
+--- !u!1001 &336831672
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 39.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 356951414006958677, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5877113242731003760, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: scenename
+      value: RuinsFloor2Night
+      objectReference: {fileID: 0}
+    - target: {fileID: 6602293057577937080, guid: a9571888df61cfb44876bb2893cac112, type: 3}
+      propertyPath: m_Name
+      value: Gateway
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9571888df61cfb44876bb2893cac112, type: 3}
 --- !u!1 &374146630
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,67 +915,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.000001, y: 1.0000064}
   m_EdgeRadius: 0
---- !u!1001 &673904987
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3853113376207450590, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: scenename
-      value: RuinsFloor2Night
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.21202278
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 41.772503
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4836802544576631600, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439453629084322554, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
-      propertyPath: m_Name
-      value: Gate
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ac0b791d5b0405249839502d9f2b34d2, type: 3}
 --- !u!1 &856993965
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,4 +3150,5 @@ SceneRoots:
   - {fileID: 1423373092}
   - {fileID: 990629851}
   - {fileID: 213439067}
-  - {fileID: 673904987}
+  - {fileID: 336831672}
+  - {fileID: 184437301}

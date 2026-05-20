@@ -3,8 +3,9 @@ namespace SceneScript
 {
     public class PlayerMovement1 : MonoBehaviour
     {
-        public float moveSpeed = 5f; // Player movement speed
-        private Rigidbody2D rb; // Reference to the Rigidbody2D for physics-based movement
+        public float baseSpeed = 10f; // Player movement speed
+        private Rigidbody2D rb;
+        public static string playerFace = "right";
 
         private void Start()
         {
@@ -13,15 +14,30 @@ namespace SceneScript
 
         private void Update()
         {
-            // Get user input for horizontal and vertical movement
-            float horizontal = Input.GetAxis("Horizontal"); // Left/Right arrows or A/D keys
-            float vertical = Input.GetAxis("Vertical"); // Up/Down arrows or W/S keys
-
-            // Calculate movement vector
+        	Movement();
+        }
+        
+        private void CheckFace() {
+        	if(Input.GetKey("up"))
+        		playerFace = "up";
+        	if(Input.GetKey("down"))
+        		playerFace = "down";
+        	if(Input.GetKey("left"))
+        		playerFace = "left";
+        	if(Input.GetKey("right"))
+        		playerFace = "right";
+        }
+        
+        private void Movement() {
+        	CheckFace();
+        	float moveSpeed = baseSpeed;
+            float horizontal = Input.GetAxis("Horizontal"); // Left/Right arrows
+            float vertical = Input.GetAxis("Vertical"); // Up/Down arrows
             Vector2 movement = new Vector2(horizontal, vertical) * moveSpeed;
-
-            // Apply movement to Rigidbody2D to ensure physics-based movement
-            rb.linearVelocity = movement; // The Rigidbody2D controls position based on velocity
+            if(Input.GetKey(KeyCode.LeftShift))
+            	rb.linearVelocity = movement * 5;
+            else
+            	rb.linearVelocity = movement;
         }
     }
 }
