@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectile : MonoBehaviour
+public class projectile2 : MonoBehaviour
 {
-    public static float shotSpeed = 10;
+    public static float shotSpeed = -10;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
