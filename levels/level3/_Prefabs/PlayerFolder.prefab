@@ -164,12 +164,12 @@ GameObject:
   - component: {fileID: 6453906693958757480}
   - component: {fileID: 801284955406950697}
   - component: {fileID: 3793309540924206653}
-  - component: {fileID: 279267220759899506}
   - component: {fileID: 5921921404220517018}
   - component: {fileID: 3817456025774164375}
+  - component: {fileID: 137521713144375431}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,25 +246,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &279267220759899506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5597022986783555303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4146fc6317cd47e49ad767be19137ad7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneScript.PlayerMovement
-  moveSpeed: 10
-  attackPoint: {fileID: 0}
-  attackRange: 0.5
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  attackDamage: 1
 --- !u!50 &5921921404220517018
 Rigidbody2D:
   serializedVersion: 5
@@ -338,6 +319,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &137521713144375431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5597022986783555303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7c0afb4649e4a8fb1fe4912debab51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneScript.PlayerMovement1
+  moveSpeed: 10
 --- !u!1 &7100427678772966377
 GameObject:
   m_ObjectHideFlags: 0
