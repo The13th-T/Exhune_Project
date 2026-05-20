@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class testPlayer : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class testPlayer : MonoBehaviour
 	public static float playerPositionX = 0;
 	public static float playerPositionY = 0;
     public static float gravity = -20;
+    public static float hp = 100;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,12 +42,17 @@ public class testPlayer : MonoBehaviour
         {
             if (Input.GetKey("up"))
             {
-                transform.Translate(0, 400 * Time.deltaTime, 0);
+                transform.Translate(0, 600 * Time.deltaTime, 0);
             }
         }
         else
         {
             transform.Translate(0, gravity * Time.deltaTime, 0);
+        }
+
+        if (hp <= 0)
+        {
+            SceneManager.LoadScene("levelSelect");
         }
     }
 }

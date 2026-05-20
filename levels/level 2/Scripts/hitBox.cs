@@ -16,11 +16,11 @@ public class hitBox : MonoBehaviour
     {
         if (testPlayer.playerDirection == "right")
         {
-            transform.position = new Vector3(testPlayer.playerPositionX + 1, testPlayer.playerPositionY, 0);
+            transform.position = new Vector3(testPlayer.playerPositionX + 2, testPlayer.playerPositionY, 0);
         }
         if (testPlayer.playerDirection == "left")
         {
-            transform.position = new Vector3(testPlayer.playerPositionX - 1, testPlayer.playerPositionY, 0);
+            transform.position = new Vector3(testPlayer.playerPositionX - 2, testPlayer.playerPositionY, 0);
         }
         if (Input.GetKey("space"))
         {

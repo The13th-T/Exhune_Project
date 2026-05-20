@@ -17,4 +17,22 @@ public class projectile : MonoBehaviour
     {
         transform.Translate(shotSpeed * Time.deltaTime, 0, 0);
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            enemyScript.hp -= 1;
+            Destroy(gameObject);
+        }
+        else if (other.tag == "Enemy2")
+        {
+            enemyScript2.hp -= 1;
+            Destroy(gameObject);
+        }
+        else if(other.tag == "wall")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

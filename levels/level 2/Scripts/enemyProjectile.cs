@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectile2 : MonoBehaviour
+public class enemyProjectile : MonoBehaviour
 {
-    public static float shotSpeed = -10;
+    public static float shotSpeed = 10;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,17 +20,12 @@ public class projectile2 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Player")
         {
-            enemyScript.hp -= 1;
+            testPlayer.hp -= 1;
             Destroy(gameObject);
         }
-        else if (other.tag == "Enemy2")
-        {
-            enemyScript2.hp -= 1;
-            Destroy(gameObject);
-        }
-        else if(other.tag == "wall")
+        else
         {
             Destroy(gameObject);
         }
